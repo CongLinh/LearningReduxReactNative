@@ -8,10 +8,10 @@ export default class Controller extends Component {
                 <Text style={styleController.controllName}>CONTROLLER COMPONENT</Text>
                 <View style={styleController.buttonContainer}>
                     <TouchableOpacity style={styleController.button}>
-                        <Text style={styleController.buttonText}>+</Text>
+                        <Text style={styleController.buttonText}>➕</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styleController.button}>
-                        <Text style={styleController.buttonText}>-</Text>
+                        <Text style={styleController.buttonText}>➖</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -26,7 +26,8 @@ const styleController = StyleSheet.create({
         justifyContent: 'space-around',
         backgroundColor: 'yellow',
         alignSelf: 'stretch',
-        margin: 20
+        margin: 20,
+        borderRadius: 20
     },
     controllName: {
         fontSize: 20,
@@ -38,13 +39,17 @@ const styleController = StyleSheet.create({
     },
     button: {
         backgroundColor: 'black',
-        paddingHorizontal: 50,
-        paddingVertical: 25,
+        // paddingHorizontal: 50,
+        // paddingVertical: 25,
+        width: 120,
+        height: 120,
         margin: 10,
-        borderRadius: 5
+        borderRadius: 20,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     buttonText: {
         color: 'white',
-        fontSize: 40
+        fontSize: 20
     }
 });

@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, StatusBar } from 'react-native';
 import Controller from './Controller';
+
+StatusBar.setBackgroundColor('red');
 
 export default class App extends Component {
     render() {
         return (
             <View style={styleApp.container}>
                 <View style={styleApp.header}>
-                    <Text style={styleApp.appName}>EXAM 1: {'\n'}APP COMPONENT</Text>
+                    <Text style={styleApp.appName}>APP COMPONENT</Text>
                     <Text style={styleApp.value}>0</Text>
                 </View>
                 <Controller />
@@ -36,7 +38,7 @@ const styleApp = StyleSheet.create({
     },
     value: {
         color: 'yellow',
-        fontSize: 40
+        fontSize: 60
     }
 });
 
